@@ -21,7 +21,7 @@ const colognes = [
       mid: ["Musk", "Wood"],
       base: ["Tobacco", "Ambergris"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
   {
     id: "szn-02",
@@ -35,7 +35,7 @@ const colognes = [
       mid: ["Leather"],
       base: ["Amber", "Milk", "Oud"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
   {
     id: "szn-03",
@@ -49,7 +49,7 @@ const colognes = [
       mid: ["Vanilla", "Fresh Notes", "Leather"],
       base: ["Green Notes", "Amber", "Coconut"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
   {
     id: "szn-04",
@@ -63,7 +63,7 @@ const colognes = [
       mid: ["Cardamom", "Sage"],
       base: ["Vanilla", "Amber", "Musk", "Patchouli"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
   {
     id: "szn-05",
@@ -77,7 +77,7 @@ const colognes = [
       mid: ["Fresh", "Fruit", "Ozone"],
       base: ["Musk", "Patchouli", "Vanilla"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
   {
     id: "szn-06",
@@ -91,7 +91,7 @@ const colognes = [
       mid: ["Sage", "Nutmeg"],
       base: ["Vanilla", "Amber", "Caramel"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
   {
     id: "szn-540",
@@ -105,7 +105,7 @@ const colognes = [
       mid: ["Ambroxan", "Hedione", "Virginia Cedar"],
       base: ["Jasmine", "Almond"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9, "100ml": 50 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10, "100ml": 50 }
   },
 
   // ═══════════ DESIGNER COLLECTION ═══════════
@@ -122,7 +122,7 @@ const colognes = [
       mid: ["Apricot", "Basil", "Carrot Seeds", "May Rose"],
       base: ["Fig", "Dates", "Ambrette"]
     },
-    prices: { "1ml": 9, "2ml": 16, "3ml": 22, "5ml": 31, "10ml": 54 }
+    prices: { "1ml": 7, "2ml": 13, "3ml": 18, "5ml": 30, "10ml": 58 }
   },
   {
     id: "ch-bad-boy",
@@ -137,7 +137,7 @@ const colognes = [
       mid: ["Truffle", "Woodsy Notes"],
       base: ["Vanilla", "Frankincense"]
     },
-    prices: { "1ml": 7, "2ml": 11, "3ml": 15, "5ml": 22, "10ml": 37 }
+    prices: { "1ml": 4, "2ml": 7, "3ml": 10, "5ml": 16, "10ml": 30 }
   },
   {
     id: "armani-swya",
@@ -152,7 +152,7 @@ const colognes = [
       mid: ["Lavender", "Davana"],
       base: ["Madagascar Vanilla", "Chestnut", "Cedar", "Patchouli"]
     },
-    prices: { "1ml": 4, "2ml": 7, "3ml": 9, "5ml": 13, "10ml": 21 }
+    prices: { "1ml": 4, "2ml": 7, "3ml": 10, "5ml": 16, "10ml": 30 }
   },
   {
     id: "alhambra-immortel",
@@ -167,7 +167,7 @@ const colognes = [
       mid: ["Rosemary", "Water Notes", "Sage", "Geranium"],
       base: ["Ambroxan", "Amber", "Labdanum"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 6 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10 }
   },
   {
     id: "issey-leau",
@@ -182,7 +182,7 @@ const colognes = [
       mid: ["Blue Lotus", "Nutmeg", "Geranium", "Saffron"],
       base: ["Vetiver", "Musk", "Cedar", "Sandalwood", "Amber"]
     },
-    prices: { "1ml": 5, "2ml": 8, "3ml": 11, "5ml": 16, "10ml": 27 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 7, "10ml": 12 }
   },
   {
     id: "xerjoff-erba",
@@ -197,7 +197,7 @@ const colognes = [
       mid: ["Mediterranean Fruits", "Summer Berries"],
       base: ["White Musk", "Madagascar Vanilla", "Amber"]
     },
-    prices: { "1ml": 8, "2ml": 14, "3ml": 18, "5ml": 26, "10ml": 45 }
+    prices: { "1ml": 5, "2ml": 9, "3ml": 13, "5ml": 20, "10ml": 39 }
   },
   {
     id: "mmm-jazz",
@@ -212,7 +212,7 @@ const colognes = [
       mid: ["Rum", "Java Vetiver Oil", "Clary Sage"],
       base: ["Tobacco Leaf", "Vanilla Bean", "Styrax"]
     },
-    prices: { "1ml": 5, "2ml": 8, "3ml": 11, "5ml": 16, "10ml": 27 }
+    prices: { "1ml": 5, "2ml": 8, "3ml": 11, "5ml": 17, "10ml": 31 }
   },
   {
     id: "val-bir-intense",
@@ -227,7 +227,7 @@ const colognes = [
       mid: ["Lavender"],
       base: ["Vetiver"]
     },
-    prices: { "1ml": 5, "2ml": 8, "3ml": 10, "5ml": 15, "10ml": 25 }
+    prices: { "1ml": 4, "2ml": 7, "3ml": 10, "5ml": 16, "10ml": 30 }
   },
   {
     id: "jpg-le-beau",
@@ -242,7 +242,7 @@ const colognes = [
       mid: ["Coconut"],
       base: ["Tonka Bean"]
     },
-    prices: { "1ml": 3, "2ml": 5, "3ml": 7, "5ml": 10, "10ml": 18 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 6, "5ml": 9, "10ml": 17 }
   },
   {
     id: "jpg-le-male-lp",
@@ -257,7 +257,7 @@ const colognes = [
       mid: ["Lavender", "Iris"],
       base: ["Vanilla", "Oriental Notes", "Woodsy Notes"]
     },
-    prices: { "1ml": 4, "2ml": 6, "3ml": 8, "5ml": 11, "10ml": 19 }
+    prices: { "1ml": 3, "2ml": 5, "3ml": 7, "5ml": 11, "10ml": 19 }
   },
   {
     id: "jpg-le-male-elixir",
@@ -272,7 +272,7 @@ const colognes = [
       mid: ["Vanilla", "Benzoin"],
       base: ["Honey", "Tonka Bean", "Tobacco"]
     },
-    prices: { "1ml": 5, "2ml": 9, "3ml": 12, "5ml": 17, "10ml": 29 }
+    prices: { "1ml": 3, "2ml": 5, "3ml": 7, "5ml": 11, "10ml": 21 }
   },
   {
     id: "jpg-le-male",
@@ -287,7 +287,7 @@ const colognes = [
       mid: ["Cinnamon", "Orange Blossom", "Caraway"],
       base: ["Vanilla", "Tonka Bean", "Amber", "Sandalwood"]
     },
-    prices: { "1ml": 4, "2ml": 7, "3ml": 9, "5ml": 13, "10ml": 22 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 6, "5ml": 8, "10ml": 15 }
   },
   {
     id: "lattafa-qahwa",
@@ -302,7 +302,7 @@ const colognes = [
       mid: ["Praline", "Candied Fruits", "White Flowers"],
       base: ["Coffee", "Vanilla", "Tonka Bean", "Benzoin", "Musk"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10 }
   },
   {
     id: "lattafa-dukhan",
@@ -317,7 +317,7 @@ const colognes = [
       mid: ["Cistus", "Orange Flower", "Incense", "Patchouli"],
       base: ["Tobacco", "Amber", "Tonka Bean", "Benzoin", "Praline"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 9 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10 }
   },
   {
     id: "rl-polo-blue",
@@ -332,7 +332,7 @@ const colognes = [
       mid: ["Basil", "Verbena", "Clary Sage", "Orris"],
       base: ["Suede", "Vetiver", "Woodsy Notes", "Patchouli"]
     },
-    prices: { "1ml": 6, "2ml": 10, "3ml": 13, "5ml": 18, "10ml": 31 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 6, "5ml": 8, "10ml": 15 }
   },
   {
     id: "nautica-voyage",
@@ -347,7 +347,7 @@ const colognes = [
       mid: ["Lotus", "Mimosa"],
       base: ["Musk", "Cedar", "Oakmoss", "Amber"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 6 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10 }
   },
   {
     id: "nautica-blue",
@@ -362,7 +362,7 @@ const colognes = [
       mid: ["Water Lily", "Jasmine"],
       base: ["Sandalwood", "Musk", "Cedar"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 6 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10 }
   },
   {
     id: "montagne-imaginary",
@@ -377,7 +377,7 @@ const colognes = [
       mid: ["Nigerian Ginger", "Tunisian Neroli", "Ceylon Cinnamon"],
       base: ["Chinese Black Tea", "Ambroxan", "Olibanum", "Guaiac Wood"]
     },
-    prices: { "1ml": 5, "2ml": 6, "3ml": 7, "5ml": 10, "10ml": 17 }
+    prices: { "1ml": 3, "2ml": 5, "3ml": 7, "5ml": 10, "10ml": 17 }
   },
   {
     id: "cremo-sbv",
@@ -392,7 +392,7 @@ const colognes = [
       mid: ["Cashmere Wood"],
       base: ["Bourbon Vanilla", "Vetiver"]
     },
-    prices: { "1ml": 2, "2ml": 3, "3ml": 4, "5ml": 5, "10ml": 6 }
+    prices: { "1ml": 3, "2ml": 4, "3ml": 5, "5ml": 6, "10ml": 10 }
   },
   {
     id: "val-purple",
@@ -407,7 +407,7 @@ const colognes = [
       mid: ["Lavandin", "Coconut Accord"],
       base: ["Amberwood"]
     },
-    prices: { "1ml": 4, "2ml": 7, "3ml": 9, "5ml": 13, "10ml": 21 }
+    prices: { "1ml": 4, "2ml": 6, "3ml": 9, "5ml": 14, "10ml": 25 }
   }
 ];
 
@@ -423,10 +423,10 @@ const bundles = [
     icon: "\u2600\uFE0F",
     price: 20,
     items: [
-      { cologneId: "nautica-voyage", size: "5ml", individualPrice: 5 },
-      { cologneId: "issey-leau", size: "3ml", individualPrice: 11 },
-      { cologneId: "xerjoff-erba", size: "2ml", individualPrice: 14 },
-      { cologneId: "lv-pacific-chill", size: "1ml", individualPrice: 9 }
+      { cologneId: "nautica-voyage", size: "5ml", individualPrice: 6 },
+      { cologneId: "issey-leau", size: "3ml", individualPrice: 5 },
+      { cologneId: "xerjoff-erba", size: "2ml", individualPrice: 9 },
+      { cologneId: "lv-pacific-chill", size: "1ml", individualPrice: 7 }
     ]
   },
   {
@@ -437,10 +437,10 @@ const bundles = [
     icon: "\u2744\uFE0F",
     price: 20,
     items: [
-      { cologneId: "lattafa-qahwa", size: "5ml", individualPrice: 5 },
+      { cologneId: "lattafa-qahwa", size: "5ml", individualPrice: 6 },
       { cologneId: "mmm-jazz", size: "3ml", individualPrice: 11 },
       { cologneId: "armani-swya", size: "2ml", individualPrice: 7 },
-      { cologneId: "jpg-le-male-elixir", size: "1ml", individualPrice: 5 }
+      { cologneId: "jpg-le-male-elixir", size: "1ml", individualPrice: 3 }
     ]
   },
   {
@@ -451,10 +451,10 @@ const bundles = [
     icon: "\u2693",
     price: 15,
     items: [
-      { cologneId: "jpg-le-male", size: "3ml", individualPrice: 9 },
-      { cologneId: "jpg-le-male-lp", size: "3ml", individualPrice: 8 },
-      { cologneId: "jpg-le-male-elixir", size: "2ml", individualPrice: 9 },
-      { cologneId: "jpg-le-beau", size: "2ml", individualPrice: 5 }
+      { cologneId: "jpg-le-male", size: "3ml", individualPrice: 6 },
+      { cologneId: "jpg-le-male-lp", size: "3ml", individualPrice: 7 },
+      { cologneId: "jpg-le-male-elixir", size: "2ml", individualPrice: 5 },
+      { cologneId: "jpg-le-beau", size: "2ml", individualPrice: 4 }
     ]
   },
   {
@@ -465,13 +465,13 @@ const bundles = [
     icon: "\uD83D\uDC51",
     price: 100,
     items: [
-      { cologneId: "lv-pacific-chill", size: "5ml", individualPrice: 31 },
-      { cologneId: "xerjoff-erba", size: "5ml", individualPrice: 26 },
-      { cologneId: "ch-bad-boy", size: "5ml", individualPrice: 22 },
-      { cologneId: "jpg-le-male-elixir", size: "5ml", individualPrice: 17 },
-      { cologneId: "val-bir-intense", size: "5ml", individualPrice: 15 },
-      { cologneId: "szn-540", size: "10ml", individualPrice: 9 },
-      { cologneId: "szn-01", size: "10ml", individualPrice: 9 }
+      { cologneId: "lv-pacific-chill", size: "5ml", individualPrice: 30 },
+      { cologneId: "xerjoff-erba", size: "5ml", individualPrice: 20 },
+      { cologneId: "ch-bad-boy", size: "5ml", individualPrice: 16 },
+      { cologneId: "jpg-le-male-elixir", size: "5ml", individualPrice: 11 },
+      { cologneId: "val-bir-intense", size: "5ml", individualPrice: 16 },
+      { cologneId: "szn-540", size: "10ml", individualPrice: 10 },
+      { cologneId: "szn-01", size: "10ml", individualPrice: 10 }
     ]
   }
 ];
