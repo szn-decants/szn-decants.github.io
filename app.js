@@ -377,7 +377,7 @@ const colognes = [
       mid: ["Nigerian Ginger", "Tunisian Neroli", "Ceylon Cinnamon"],
       base: ["Chinese Black Tea", "Ambroxan", "Olibanum", "Guaiac Wood"]
     },
-    prices: { "1ml": 3, "2ml": 5, "3ml": 7, "5ml": 10, "10ml": 17 }
+    prices: { "1ml": 5, "2ml": 6, "3ml": 7, "5ml": 10, "10ml": 17 }
   },
   {
     id: "cremo-sbv",
