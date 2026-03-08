@@ -621,7 +621,7 @@ function openBundleModal(bundleId) {
   if (!bundle) return;
 
   const badge = document.getElementById('modalBadge');
-  badge.innerHTML = `<span style="font-size:2rem">${bundle.icon}</span>`;
+  badge.innerHTML = `<span style="font-size:2rem;line-height:1">${bundle.icon}</span>`;
   badge.style.background = bundle.gradient;
   document.getElementById('modalBrand').textContent = 'SZN Bundle';
   document.getElementById('modalName').textContent = bundle.name;
@@ -637,11 +637,13 @@ function openBundleModal(bundleId) {
   const savings = totalIndividual - bundle.price;
   const savingsPercent = Math.round((savings / totalIndividual) * 100);
 
-  let itemsHtml = bundle.items.map(item => {
+  let itemsHtml = `<p style="text-align:center;color:#a0a0a0;font-size:0.9rem;margin-bottom:16px;font-weight:300">${bundle.description}</p>`;
+
+  itemsHtml += bundle.items.map((item, idx) => {
     const cologne = colognes.find(c => c.id === item.cologneId);
     const displayName = cologne ? `${cologne.brand} ${cologne.name}` : item.cologneId;
     return `
-      <div class="bundle-item-row">
+      <div class="bundle-item-row" style="animation:fadeInUp 0.3s ease ${idx * 0.05}s both">
         <div class="bundle-item-info">
           <span class="bundle-item-name">${displayName}</span>
           <span class="bundle-item-size">${item.size}</span>
