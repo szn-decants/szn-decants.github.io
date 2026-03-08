@@ -377,7 +377,7 @@ const colognes = [
       mid: ["Nigerian Ginger", "Tunisian Neroli", "Ceylon Cinnamon"],
       base: ["Chinese Black Tea", "Ambroxan", "Olibanum", "Guaiac Wood"]
     },
-    prices: { "1ml": 5, "2ml": 6, "3ml": 7, "5ml": 10, "10ml": 17 }
+    prices: { "1ml": 3, "2ml": 5, "3ml": 7, "5ml": 10, "10ml": 17 }
   },
   {
     id: "cremo-sbv",
@@ -408,6 +408,71 @@ const colognes = [
       base: ["Amberwood"]
     },
     prices: { "1ml": 4, "2ml": 7, "3ml": 9, "5ml": 13, "10ml": 21 }
+  }
+];
+
+
+// ── Bundle Data ──────────────────────────────
+
+const bundles = [
+  {
+    id: "bundle-summer",
+    name: "Summer Scents",
+    description: "Fresh & breezy picks for warm weather",
+    gradient: "linear-gradient(135deg, #1a4a2a 0%, #0a2a15 50%, #2a5a3a 100%)",
+    icon: "\u2600\uFE0F",
+    price: 20,
+    items: [
+      { cologneId: "nautica-voyage", size: "5ml", individualPrice: 5 },
+      { cologneId: "issey-leau", size: "3ml", individualPrice: 11 },
+      { cologneId: "xerjoff-erba", size: "2ml", individualPrice: 14 },
+      { cologneId: "lv-pacific-chill", size: "1ml", individualPrice: 9 }
+    ]
+  },
+  {
+    id: "bundle-winter",
+    name: "Winter Scents",
+    description: "Warm & cozy picks for cold nights",
+    gradient: "linear-gradient(135deg, #1a2040 0%, #0a0f2a 50%, #2a3060 100%)",
+    icon: "\u2744\uFE0F",
+    price: 20,
+    items: [
+      { cologneId: "lattafa-qahwa", size: "5ml", individualPrice: 5 },
+      { cologneId: "mmm-jazz", size: "3ml", individualPrice: 11 },
+      { cologneId: "armani-swya", size: "2ml", individualPrice: 7 },
+      { cologneId: "jpg-le-male-elixir", size: "1ml", individualPrice: 5 }
+    ]
+  },
+  {
+    id: "bundle-jpg",
+    name: "JPG Collection",
+    description: "The best of Jean Paul Gaultier",
+    gradient: "linear-gradient(135deg, #2a1a35 0%, #15081a 50%, #351a40 100%)",
+    icon: "\u2693",
+    price: 15,
+    items: [
+      { cologneId: "jpg-le-male", size: "3ml", individualPrice: 9 },
+      { cologneId: "jpg-le-male-lp", size: "3ml", individualPrice: 8 },
+      { cologneId: "jpg-le-male-elixir", size: "2ml", individualPrice: 9 },
+      { cologneId: "jpg-le-beau", size: "2ml", individualPrice: 5 }
+    ]
+  },
+  {
+    id: "bundle-premium",
+    name: "Premium Collection",
+    description: "7 full-size decants \u2014 the ultimate sampler",
+    gradient: "linear-gradient(135deg, #4a3520 0%, #2a1a08 50%, #5a4528 100%)",
+    icon: "\uD83D\uDC51",
+    price: 100,
+    items: [
+      { cologneId: "lv-pacific-chill", size: "5ml", individualPrice: 31 },
+      { cologneId: "xerjoff-erba", size: "5ml", individualPrice: 26 },
+      { cologneId: "ch-bad-boy", size: "5ml", individualPrice: 22 },
+      { cologneId: "jpg-le-male-elixir", size: "5ml", individualPrice: 17 },
+      { cologneId: "val-bir-intense", size: "5ml", individualPrice: 15 },
+      { cologneId: "szn-540", size: "10ml", individualPrice: 9 },
+      { cologneId: "szn-01", size: "10ml", individualPrice: 9 }
+    ]
   }
 ];
 
@@ -464,6 +529,43 @@ function createCard(cologne, index) {
 }
 
 
+// ── Render Bundles ───────────────────────────
+
+function renderBundles() {
+  const bundleGrid = document.getElementById('bundle-grid');
+  if (!bundleGrid) return;
+  bundleGrid.innerHTML = bundles.map((b, i) => createBundleCard(b, i)).join('');
+}
+
+function createBundleCard(bundle, index) {
+  const totalIndividual = bundle.items.reduce((sum, item) => sum + item.individualPrice, 0);
+  const savings = totalIndividual - bundle.price;
+  const savingsPercent = Math.round((savings / totalIndividual) * 100);
+
+  return `
+    <div class="card bundle-card"
+         data-id="${bundle.id}"
+         data-category="bundle"
+         style="animation-delay: ${index * 0.05}s"
+         onclick="openBundleModal('${bundle.id}')">
+      <div class="card-visual" style="background: ${bundle.gradient}">
+        <div class="card-szn-badge bundle-badge">BUNDLE</div>
+        <div class="card-initial bundle-icon">${bundle.icon}</div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">SZN Bundle</div>
+        <div class="card-name">${bundle.name}</div>
+        <div class="card-price"><span>$${bundle.price}</span></div>
+        <div class="card-tags">
+          <span class="card-tag bundle-save-tag">Save $${savings} (${savingsPercent}%)</span>
+          <span class="card-tag">${bundle.items.length} fragrances</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
 // ── Modal ─────────────────────────────────────
 
 const modal = document.getElementById('modal');
@@ -472,6 +574,11 @@ const modalClose = document.getElementById('modalClose');
 function openModal(id) {
   const cologne = colognes.find(c => c.id === id);
   if (!cologne) return;
+
+  // Show cologne sections, hide bundle sections
+  document.getElementById('modalNotes').style.display = '';
+  document.getElementById('modalPricingSection').style.display = '';
+  document.getElementById('modalBundleItems').style.display = 'none';
 
   const badge = document.getElementById('modalBadge');
   if (cologne.img) {
@@ -509,6 +616,61 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
+function openBundleModal(bundleId) {
+  const bundle = bundles.find(b => b.id === bundleId);
+  if (!bundle) return;
+
+  const badge = document.getElementById('modalBadge');
+  badge.innerHTML = `<span style="font-size:2rem">${bundle.icon}</span>`;
+  badge.style.background = bundle.gradient;
+  document.getElementById('modalBrand').textContent = 'SZN Bundle';
+  document.getElementById('modalName').textContent = bundle.name;
+
+  // Hide scent notes, show bundle items
+  document.getElementById('modalNotes').style.display = 'none';
+  document.getElementById('modalPricingSection').style.display = 'none';
+  const bundleSection = document.getElementById('modalBundleItems');
+  bundleSection.style.display = 'block';
+
+  // Build items list
+  const totalIndividual = bundle.items.reduce((sum, item) => sum + item.individualPrice, 0);
+  const savings = totalIndividual - bundle.price;
+  const savingsPercent = Math.round((savings / totalIndividual) * 100);
+
+  let itemsHtml = bundle.items.map(item => {
+    const cologne = colognes.find(c => c.id === item.cologneId);
+    const displayName = cologne ? `${cologne.brand} ${cologne.name}` : item.cologneId;
+    return `
+      <div class="bundle-item-row">
+        <div class="bundle-item-info">
+          <span class="bundle-item-name">${displayName}</span>
+          <span class="bundle-item-size">${item.size}</span>
+        </div>
+        <span class="bundle-item-price">$${item.individualPrice}</span>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('bundleItemsList').innerHTML = itemsHtml;
+  document.getElementById('bundleSavings').innerHTML = `
+    <div class="bundle-total-row">
+      <span>Individual Total</span>
+      <span class="bundle-total-strikethrough">$${totalIndividual}</span>
+    </div>
+    <div class="bundle-total-row bundle-price-row">
+      <span>Bundle Price</span>
+      <span class="bundle-total-price">$${bundle.price}</span>
+    </div>
+    <div class="bundle-total-row bundle-savings-row">
+      <span>You Save</span>
+      <span class="bundle-total-savings">$${savings} (${savingsPercent}% off)</span>
+    </div>
+  `;
+
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
 modalClose.addEventListener('click', closeModal);
 modal.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
@@ -540,14 +702,17 @@ searchInput.addEventListener('input', () => {
 
 function applyFilters() {
   const query = searchInput.value.toLowerCase().trim();
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.card:not(.bundle-card)');
+  const bundleCards = document.querySelectorAll('.bundle-card');
   const sznSection = document.getElementById('szn-section');
   const designerSection = document.getElementById('designer-section');
+  const bundleSection = document.getElementById('bundle-section');
   const designerTitle = designerSection.querySelector('.section-title');
   const designerSubtitle = designerSection.querySelector('.section-subtitle');
 
   let sznVisible = 0;
   let designerVisible = 0;
+  let bundleVisible = 0;
 
   cards.forEach(card => {
     const category = card.dataset.category;
@@ -560,6 +725,7 @@ function applyFilters() {
     else if (activeFilter === 'szn') showByCategory = category === 'szn';
     else if (activeFilter === 'designer') showByCategory = category === 'designer';
     else if (activeFilter === 'budget') showByCategory = category === 'budget';
+    else if (activeFilter === 'bundle') showByCategory = false;
 
     // Search filter
     let showBySearch = true;
@@ -574,6 +740,27 @@ function applyFilters() {
       if (category === 'szn') sznVisible++;
       else designerVisible++;
     }
+  });
+
+  // Handle bundle cards
+  bundleCards.forEach(card => {
+    const showByCategory = activeFilter === 'all' || activeFilter === 'bundle';
+    let showBySearch = true;
+    if (query) {
+      const bundleId = card.dataset.id;
+      const bundle = bundles.find(b => b.id === bundleId);
+      if (bundle) {
+        const nameMatch = bundle.name.toLowerCase().includes(query);
+        const itemMatch = bundle.items.some(item => {
+          const cologne = colognes.find(c => c.id === item.cologneId);
+          return cologne && (cologne.brand.toLowerCase().includes(query) || cologne.name.toLowerCase().includes(query));
+        });
+        showBySearch = nameMatch || itemMatch;
+      }
+    }
+    const show = showByCategory && showBySearch;
+    card.classList.toggle('hidden', !show);
+    if (show) bundleVisible++;
   });
 
   // Update section title based on active filter
@@ -591,9 +778,11 @@ function applyFilters() {
   // Hide section headers if no cards visible
   sznSection.style.display = sznVisible > 0 ? '' : 'none';
   designerSection.style.display = designerVisible > 0 ? '' : 'none';
+  if (bundleSection) bundleSection.style.display = bundleVisible > 0 ? '' : 'none';
 }
 
 
 // ── Init ──────────────────────────────────────
 
 renderCards();
+renderBundles();
