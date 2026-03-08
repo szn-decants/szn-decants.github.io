@@ -36,6 +36,131 @@
       <button class="filter-btn" data-filter="szn">SZN Originals</button>
       <button class="filter-btn" data-filter="designer">Designer</button>
       <button class="filter-btn" data-filter="budget">Budget Friendly</button>
+      <button class="filter-btn" data-filter="bundle">Bundles</button>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search fragrances..." class="search-input">
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="section" id="szn-section">
+      <div class="section-header">
+        <h2 class="section-title">SZN Originals</h2>
+        <p class="section-subtitle">Handcrafted signature scents</p>
+      </div>
+      <div class="card-grid" id="szn-grid"></div>
+    </section>
+
+    <section class="section" id="bundle-section">
+      <div class="section-header">
+        <h2 class="section-title">Bundle Deals</h2>
+        <p class="section-subtitle">Curated sets at unbeatable prices &mdash; save up to 49%</p>
+      </div>
+      <div class="card-grid" id="bundle-grid"></div>
+    </section>
+
+    <section class="section" id="designer-section">
+      <div class="section-header">
+        <h2 class="section-title">Designer Collection</h2>
+        <p class="section-subtitle">Premium decants from top fragrance houses</p>
+      </div>
+      <div class="card-grid" id="designer-grid"></div>
+    </section>
+
+    <!-- HOW TO ORDER -->
+    <section class="section order-section" id="order">
+      <div class="order-content">
+        <h2 class="section-title">How to Order</h2>
+        <div class="order-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Browse</h3>
+            <p>Tap any fragrance to see scent notes, sizes &amp; pricing</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Choose</h3>
+            <p>Pick your size &mdash; from 1ml samples to full bottles</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>DM to Order</h3>
+            <p>Send a message on Instagram with your picks</p>
+          </div>
+        </div>
+        <a href="https://instagram.com/szn.decants" target="_blank" rel="noopener" class="order-btn">
+          <svg class="ig-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          DM @szn.decants to Order
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">SZN</span>
+        <span class="footer-tagline">DECANTS</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://instagram.com/szn.decants" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:decantszn@gmail.com">Email</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 SZN Decants. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-header" id="modalHeader">
+        <div class="modal-badge" id="modalBadge"></div>
+        <div class="modal-title-wrap">
+          <p class="modal-brand" id="modalBrand"></p>
+          <h2 class="modal-name" id="modalName"></h2>
+        </div>
+      </div>
+      <div class="modal-notes" id="modalNotes">
+        <div class="note-col">
+          <div class="note-icon">&#9728;&#65039;</div>
+          <h4>Top Notes</h4>
+          <ul id="notesTop"></ul>
+        </div>
+        <div class="note-col">
+          <div class="note-icon">&#127804;</div>
+          <h4>Heart Notes</h4>
+          <ul id="notesMid"></ul>
+        </div>
+        <div class="note-col">
+          <div class="note-icon">&#127794;</div>
+          <h4>Base Notes</h4>
+          <ul id="notesBase"></ul>
+        </div>
+      </div>
+      <div class="modal-bundle-items" id="modalBundleItems" style="display:none">
+        <h3>What's Included</h3>
+        <div class="bundle-items-list" id="bundleItemsList"></div>
+        <div class="bundle-savings" id="bundleSavings"></div>
+      </div>
+      <div class="modal-pricing" id="modalPricingSection">
+        <h3>Available Sizes &amp; Pricing</h3>
+        <div class="price-grid" id="priceGrid"></div>
+      </div>
+      <a href="https://instagram.com/szn.decants" target="_blank" rel="noopener" class="modal-order-btn">
+        DM @szn.decants to Order
+      </a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+      <button class="filter-btn" data-filter="designer">Designer</button>
+      <button class="filter-btn" data-filter="budget">Budget Friendly</button>
     </div>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search fragrances..." class="search-input">
