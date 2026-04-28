@@ -215,6 +215,21 @@ const colognes = [
     prices: { "1ml": 5, "2ml": 8, "3ml": 11, "5ml": 17, "10ml": 31, "30ml": 78 }
   },
   {
+    id: "byredo-bda",
+    brand: "Byredo",
+    name: "Bal d'Afrique",
+    category: "designer",
+    gradient: "linear-gradient(135deg, #4a3a1a 0%, #1a1508 100%)",
+    initial: "BY",
+    img: "https://marissacollections.com/cdn/shop/files/byredo-beautyfragran-baldafri-100ml-bal-dafrique-perfume-100ml-2.jpg?v=1749652536",
+    notes: {
+      top: ["Bergamot", "African Marigold", "Black Currant", "Lemon"],
+      mid: ["Violet", "Cyclamen", "Jasmine"],
+      base: ["Vetiver", "Amber", "Musk", "Moroccan Cedar"]
+    },
+    prices: { "1ml": 5, "2ml": 9, "3ml": 13, "5ml": 20, "10ml": 39, "30ml": 98 }
+  },
+  {
     id: "val-bir-intense",
     brand: "Valentino",
     name: "Born in Roma Intense",
